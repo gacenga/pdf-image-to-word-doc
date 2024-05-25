@@ -30,7 +30,7 @@ def upload():
     if file_path:
         save_as = filedialog.asksaveasfilename(defaultextension=".docx", filetypes=[("Word Documents", "*.docx")])
         if save_as:
-       return file_path, save_as
+            return file_path, save_as
 
 #create main window
 root = tk.Tk()
