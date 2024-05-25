@@ -10,7 +10,6 @@ pytesseract.pytesseract.tesseract_cmd = r'C:\Program Files\Tesseract-OCR\tessera
 def analyze():
     try:
         path, output_path = upload()
-        output_path = output_path.get().strip()
         if path.lower().endswith('.pdf'):
             all_text = ""
             images = analyze_pdf(path)
