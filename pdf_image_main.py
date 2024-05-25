@@ -28,8 +28,7 @@ def analyze():
 def upload():
     file_path = filedialog.askopenfilename(filetypes=[("PDF files", "*.pdf"), ("Image files", "*.png;*.jpg;*.jpeg;*.tiff")])
     if file_path:
-        save_as = filedialog.asksaveasfilename(defaultextension=".docx",
-                                               filetypes=[("Word Documents", "*.docx")])
+        save_as = filedialog.asksaveasfilename(defaultextension=".docx", filetypes=[("Word Documents", "*.docx")])
         if save_as:
        return file_path, save_as
 
