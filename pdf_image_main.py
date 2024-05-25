@@ -1,6 +1,6 @@
 from to_word import to_word
 from pic_analysis import analyze_pic, analyze_pdf
-import pytesserect
+import pytesseract
 import tkinter as tk
 from tkinter import messagebox
 from tkinter import filedialog
