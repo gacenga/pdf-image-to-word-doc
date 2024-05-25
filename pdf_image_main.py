@@ -42,7 +42,7 @@ upload_button.pack(pady=10)
 
 #create and place button
 Analyze_button = tk.Button(root, text="SCAN", command=analyze)
-Analyze_button.pack(paddy=10)
+Analyze_button.pack(pady=10)
 
 #create and place result label
 result = tk.Label(root, text="", font=('Monospace', 10))
