@@ -5,6 +5,8 @@ import tkinter as tk
 from tkinter import messagebox
 from tkinter import filedialog
 
+pytesseract.pytesseract.tesseract_cmd = r'C:\Program Files\Tesseract-OCR\tesseract.exe'
+
 def analyze():
     try:
         path, output_path = upload()
@@ -29,13 +31,15 @@ def upload():
         save_as = filedialog.asksaveasfilename(defaultextension=".docx",
                                                filetypes=[("Word Documents", "*.docx")])
         if save_as:
-       return file_path, save_ase_as)
+       return file_path, save_as
+
 #create main window
 root = tk.Tk()
 root.title("pdf/img to word")
 
-#create and placeupload buttoniupload_button = tk.Button(root, text="UPLOAD", command=upload)yupload_button.pack(pady=10)
-=10)
+#create and placeupload buttoni
+upload_button = tk.Button(root, text="UPLOAD", command=upload)
+upload_button.pack(pady=10)
 
 #create and place button
 Analyze_button = tk.Button(root, text="SCAN", command=analyze)
