@@ -2,6 +2,7 @@ import pytesseract
 from PIL import Image
 import os
 import fitz
+import io
 
 #analyze picture
 def analyze_pic(path):
