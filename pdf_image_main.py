@@ -4,6 +4,7 @@ import pytesseract
 import tkinter as tk
 from tkinter import messagebox
 from tkinter import filedialog
+import io
 
 pytesseract.pytesseract.tesseract_cmd = r'C:\Program Files\Tesseract-OCR\tesseract.exe'
 
