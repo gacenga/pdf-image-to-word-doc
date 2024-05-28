@@ -4,12 +4,14 @@ import os
 import fitz
 import io
 
+
+custom_config = r'--psm 1'
 #analyze picture
 def analyze_pic(path):
     """Uses OCR to get text from picture"""
     with Image.open(path) as img:
         #use OCR to get text from image
-        text = pytesseract.image_to_string(img, lang='eng')
+        text = pytesseract.image_to_string(img, config=custom_config)
     return text
 
 #analyze pdf
