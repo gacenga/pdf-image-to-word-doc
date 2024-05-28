@@ -7,6 +7,7 @@ from tkinter import filedialog
 import io
 
 pytesseract.pytesseract.tesseract_cmd = r'C:\Program Files\Tesseract-OCR\tesseract.exe'
+custom_config = r'--psm 1'
 
 def analyze():
     try:
@@ -15,7 +16,7 @@ def analyze():
             all_text = ""
             images = analyze_pdf(path)
             for image in images:
-                text = pytesseract.image_to_string(image, lang='eng')
+                text = pytesseract.image_to_string(image, config=custom_config)
                 all_text += text + '\n'
             to_word(all_text, output_path)
         elif path.lower().endswith(('.jpg', '.png', '.jpeg')):
